@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chapitre 3 : Quels objets en python ? on Python site</title>
+    <link>https://JulieDjidji.github.io/fondations/chapter3/</link>
+    <description>Recent content in Chapitre 3 : Quels objets en python ? on Python site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://JulieDjidji.github.io/fondations/chapter3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Les principaux types de données : entiers, flottants, chaînes de caractère</title>
+      <link>https://JulieDjidji.github.io/fondations/chapter3/1-typessimples/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/fondations/chapter3/1-typessimples/</guid>
+      <description>Quelques exercices de manipulation Exercice 1 : afficher le type de x pour x=3, x=&amp;ldquo;test&amp;rdquo; et x=3.5
+Exercice 2 : Concaténer les chaînes de caractères suivantes &amp;ldquo;Les deux formateurs sont : &amp;ldquo;, &amp;ldquo;Julie&amp;rdquo;, &amp;ldquo; et &amp;ldquo;, &amp;ldquo;Laurent&amp;rdquo;
+Exercice 3 : Compter le nombre de fois où la lettre e est présente dans la chaîne &amp;ldquo;Je fais un comptage des e.&amp;rdquo;
+Exercice 4 : Repérer la première position où la lettre e est présente dans la chaîne &amp;ldquo;Je fais un comptage des e.</description>
+    </item>
+    
+    <item>
+      <title>Le premier objet python : les listes</title>
+      <link>https://JulieDjidji.github.io/fondations/chapter3/2-listes/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/fondations/chapter3/2-listes/</guid>
+      <description>Création et manipulation d&amp;rsquo;une liste    Action Fonction python     Creation d&amp;rsquo;une liste [] ou list()   Test de la présence d&amp;rsquo;un élément dans une liste x in liste   Accès à un élément liste[i]   Accès à plusieurs éléments liste[i:j]   Minimum de la liste min(liste)   Maximum de la liste max(liste)   Nombre d&amp;rsquo;éléments d&amp;rsquo;une liste len(liste)   Nombre d’occurrence de l&amp;rsquo;élément x dans la liste liste.</description>
+    </item>
+    
+    <item>
+      <title>Les dictionnaires</title>
+      <link>https://JulieDjidji.github.io/fondations/chapter3/3-dictionnaires/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/fondations/chapter3/3-dictionnaires/</guid>
+      <description>Mettre en évidence l&amp;rsquo;intérêt du package pprint</description>
+    </item>
+    
+    <item>
+      <title>Les sets</title>
+      <link>https://JulieDjidji.github.io/fondations/chapter3/4-sets/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/fondations/chapter3/4-sets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Les tuples</title>
+      <link>https://JulieDjidji.github.io/fondations/chapter3/5-tuples/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/fondations/chapter3/5-tuples/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

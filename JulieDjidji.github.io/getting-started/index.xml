@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Préparer le terrain : installer python on Python site</title>
+    <link>https://JulieDjidji.github.io/getting-started/</link>
+    <description>Recent content in Préparer le terrain : installer python on Python site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Oct 2017 15:26:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://JulieDjidji.github.io/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation en local</title>
+      <link>https://JulieDjidji.github.io/getting-started/installation/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/getting-started/installation/</guid>
+      <description>Pour installer python en local sur son ordinateur, nous vous conseillons d&amp;rsquo;installer la distribution anaconda disponible sur le site d&amp;rsquo;Anaconda.
+ Sous Windows, il suffit de télécharger l&amp;rsquo;exécutable puis de l&amp;rsquo;exécuter. Le site vous détaille par exemple la procédure à suivre. Sous Linux, le tutoriel permet par exemple d&amp;rsquo;installer anaconda.  Mais qu&amp;rsquo;est ce qu&amp;rsquo;anaconda ? Anaconda est une distribution Python. A son installation, Anaconda installe par défaut :</description>
+    </item>
+    
+    <item>
+      <title>Utiliser python à l’Insee</title>
+      <link>https://JulieDjidji.github.io/getting-started/configuration/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/getting-started/configuration/</guid>
+      <description>En interne à l&amp;rsquo;interne, la plateforme innovation permet d&amp;rsquo;obtenir python en un clic. Pour cela, il suffit de :
+ aller sur Onyxia se connecter (bouton login en haut à droite) ouvrir le catalogue, sélectionner jupyter et déployer le service (schéma ci-dessous) il est possible d&amp;rsquo;activer la configuration Git (onglet Git) cliquer finalement sur l&amp;rsquo;icone Créer le service  </description>
+    </item>
+    
+    <item>
+      <title>Mais quelle version de python, ai-je installé ?</title>
+      <link>https://JulieDjidji.github.io/getting-started/versioninstallee/</link>
+      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
+      
+      <guid>https://JulieDjidji.github.io/getting-started/versioninstallee/</guid>
+      <description>import sys print(sys.version)  3.7.1 (default, Dec 14 2018, 19:28:38) [GCC 7.3.0]  </description>
+    </item>
+    
+  </channel>
+</rss>

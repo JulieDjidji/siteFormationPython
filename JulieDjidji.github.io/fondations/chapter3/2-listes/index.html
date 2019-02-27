@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Le premier objet python : les listes - Python site</title>
+<meta name="generator" content="Hugo 0.40.1" />
+<link href="https://JulieDjidji.github.io/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://JulieDjidji.github.io/fondations/chapter3/2-listes/">
+<link rel="stylesheet" href="https://JulieDjidji.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://JulieDjidji.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://JulieDjidji.github.io/js/functions.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://JulieDjidji.github.io/js/jquery.backtothetop/jquery.backtothetop.min.js"></script></head>
+<body>
+<div class="container"><header>
+<h1>Python site</h1>
+
+</header>
+<div class="menu">
+<nav>
+<ul>
+<li><a href="/about/">Références python</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>Le premier objet python : les listes</h1>
+
+<h2 id="création-et-manipulation-d-une-liste">Création et manipulation d&rsquo;une liste</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Action</th>
+<th align="right">Fonction python</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Creation d&rsquo;une liste</td>
+<td align="right">[] ou <em>list()</em></td>
+</tr>
+
+<tr>
+<td align="left">Test de la présence d&rsquo;un élément dans une liste</td>
+<td align="right"><em>x in liste</em></td>
+</tr>
+
+<tr>
+<td align="left">Accès à un élément</td>
+<td align="right"><em>liste[i]</em></td>
+</tr>
+
+<tr>
+<td align="left">Accès à plusieurs éléments</td>
+<td align="right"><em>liste[i:j]</em></td>
+</tr>
+
+<tr>
+<td align="left">Minimum de la liste</td>
+<td align="right"><em>min(liste)</em></td>
+</tr>
+
+<tr>
+<td align="left">Maximum de la liste</td>
+<td align="right"><em>max(liste)</em></td>
+</tr>
+
+<tr>
+<td align="left">Nombre d&rsquo;éléments d&rsquo;une liste</td>
+<td align="right"><em>len(liste)</em></td>
+</tr>
+
+<tr>
+<td align="left">Nombre d’occurrence de l&rsquo;élément x dans la liste</td>
+<td align="right"><em>liste.count(x)</em></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="insertion-et-suppression-d-éléments-d-une-liste">Insertion et suppression d&rsquo;éléments d&rsquo;une liste</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Action</th>
+<th align="right">Fonction python</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Ajouter un élément v à la fin de la liste</td>
+<td align="right">liste.append(v)</td>
+</tr>
+
+<tr>
+<td align="left">Ajouter une liste sl à la fin de la liste</td>
+<td align="right">liste.extend(sl)</td>
+</tr>
+
+<tr>
+<td align="left">Insérer un élément v à l&rsquo;indice i</td>
+<td align="right">liste.insert(i,v)</td>
+</tr>
+
+<tr>
+<td align="left">Remplacer l&rsquo;élément i par une valeur v</td>
+<td align="right"><em>liste[i]=v</em></td>
+</tr>
+
+<tr>
+<td align="left">Remplacer les éléments d&rsquo;indices i à j par une sous liste sl</td>
+<td align="right"><em>liste[i:j]=sl</em></td>
+</tr>
+
+<tr>
+<td align="left">Supprimer le premier élément égal à v</td>
+<td align="right"><em>liste.remove(v)</em></td>
+</tr>
+
+<tr>
+<td align="left">Supprimer l&rsquo;élément d&rsquo;indice i</td>
+<td align="right"><em>liste.pop(i)</em></td>
+</tr>
+
+<tr>
+<td align="left">Supprimer tous les éléments</td>
+<td align="right"><em>liste.clear()</em> ou *liste <em>= 0</em> ou <em>liste=[]</em></td>
+</tr>
+</tbody>
+</table>
+
+<p><ins><strong>Exercice</strong></ins> :</p>
+
+<h2 id="les-compréhensions-de-liste">Les compréhensions de liste</h2>
+
+<p><strong><ins>Principe</ins> : construire une liste en parcourant tout autre itérable (liste, tuple, chaîne de caractères, &hellip;)</strong></p>
+
+<ul>
+<li>la valeur ajoutée à la liste peut résulter d&rsquo;un calcul (avec ou sans utiliser la valeur de l&rsquo;élément de l&rsquo;itérable parcouru)</li>
+<li>une condition optionnelle (if) peut filtrer les éléments de l&rsquo;itérable parcouru</li>
+<li>une condition (if else) peut permettre d&rsquo;affecter une valeur différente selon la valeur de l&rsquo;itérable parcouru</li>
+</ul>
+
+<p><strong>Pourquoi privilégier les compréhensions de liste ?</strong></p>
+
+<ul>
+<li>Code plus synthétique</li>
+<li>Rapidité : allocation de la mémoire avant l&rsquo;ajout des éléments (plutôt qu&rsquo;un redimensionnement au fil de l&rsquo;exécution comme avec la fonction <em>append</em>)</li>
+</ul>
+
+<p><ins><strong>Exercice</strong></ins> : A partir d&rsquo;une list comprehension, ré-écrire la boucle for permettant de calculer le carré des éléments compris entre 1 et 5 et stocker le résultat dans une liste.</p>
+<div class="edit-meta">Last updated on 17 Oct 2017 / Published on 17 Oct 2017<br></div><nav class="pagination"><a class="nav nav-prev" href="/fondations/chapter3/1-typessimples/" title="Les principaux types de données : entiers, flottants, chaînes de caractère"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - Les principaux types de données : entiers, flottants, chaînes de caractère</a>
+<a class="nav nav-next" href="/fondations/chapter3/3-dictionnaires/" title="Les dictionnaires">Next - Les dictionnaires <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+<nav>
+<ul>
+<li class=""><a href="https://JulieDjidji.github.io/">Home</a></li>
+
+<li class=""><a href="/getting-started/">Préparer le terrain : installer python</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/fondations/">Poser les fondations</a>
+<ul class="sub-menu">
+
+<li class=""><a href="/fondations/chapter1/">Chapitre 1 : La syntaxe</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/fondations/chapter2/">Chapitre 2 : Lecture, écriture et fermeture des fichiers</a>
+</li>
+
+<li class="parent"><a href="/fondations/chapter3/">Chapitre 3 : Quels objets en python ?</a>
+<ul class="sub-menu">
+</ul>
+  
+</li>
+
+<li class=""><a href="/fondations/chapter4/">Chapitre 4 : Les packages en python</a>
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/">Explorer les données</a>
+<ul class="">
+
+<li class=""><a href="/explorer/chapter1/">Chapitre 1 : Manipuler les données</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/chapter2/">Chapitre 2 : Visualiser les données</a>
+</li>
+
+<li class=""><a href="/explorer/chapter3/">Chapitre 3 : Manipuler et visualiser des données géographiques</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/chapter4/">Chapitre 4 : Modéliser</a>
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="/enrichir/">Enrichir les données</a>
+</li>
+
+<li class=""><a href="/applicationweb/">Créer une application</a>
+</li>
+
+<li class=""><a href="/optimiser/">Optimiser ses calculs</a>
+</li>
+</ul>
+</nav>
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

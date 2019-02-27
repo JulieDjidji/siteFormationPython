@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>3 - Les boucles - Python site</title>
+<meta name="generator" content="Hugo 0.40.1" />
+<link href="https://JulieDjidji.github.io/index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://JulieDjidji.github.io/fondations/chapter1/3-boucles/">
+<link rel="stylesheet" href="https://JulieDjidji.github.io/css/theme.min.css">
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<link rel="stylesheet" href="https://JulieDjidji.github.io/css/chroma.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://JulieDjidji.github.io/js/functions.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js"></script>
+<script src="https://JulieDjidji.github.io/js/jquery.backtothetop/jquery.backtothetop.min.js"></script></head>
+<body>
+<div class="container"><header>
+<h1>Python site</h1>
+
+</header>
+<div class="menu">
+<nav>
+<ul>
+<li><a href="/about/">Références python</a></li></ul>
+</nav>
+</div>
+<div class="content-container">
+<main><h1>3 - Les boucles</h1>
+
+<h2 id="boucle-for">Boucle for</h2>
+
+<p>Difficile d&rsquo;aborder les boucles sans évoquer a minima les listes. Pas de panique, on reviendra plus loin sur la manipulation des listes. Prenons pour l&rsquo;instant une liste [0,1,2,3,4,5]. Ecrivons une première boucle <em>for</em> qui à chaque valeur de la liste, affiche son carré.</p>
+
+<pre><code class="language-python">for n in [0,1,2,3,4,5]:
+    print(n**2, ' ', end='')
+</code></pre>
+
+<pre><code>0  1  4  9  16  25  
+</code></pre>
+
+<p><ins><strong>Exemple</strong></ins>: écrire une boucle qui pour les valeurs de 0 à 10 affiche un message qui indique si la valeur est paire ou impaire. Au sein d&rsquo;un <em>print</em>, plusieurs chaînes peuvent être concaténées simplement en écrivant *print(chaine1, chaine2).</p>
+
+<p>Si les boucles <em>for</em> s&rsquo;effectuent essentiellement sur les listes, il reste néanmoins possible d&rsquo;itérer sur une chaîne de caractères. Le code suivant parcourt la chaîne &lsquo;je code en python&rsquo; et chaque espace est remplacé par &ldquo;_&ldquo;.</p>
+
+<pre><code class="language-python">for car in 'je code en python':
+    if car not in ' ':
+        print(car,  end='')
+    else:
+        print('_',  end='')
+</code></pre>
+
+<pre><code>je_code_en_python
+</code></pre>
+
+<h2 id="boucle-while">Boucle while</h2>
+
+<p>La boucle <em>while</em> qui permet d&rsquo;exécuter un code tant qu&rsquo;une condition est satisfaite. L&rsquo;exemple précédent qui consiste à afficher le carré de l&rsquo;<em>input</em> pour ce dernier compris dans la liste [0,1,2,3,4,5] peut s&rsquo;écrire :</p>
+
+<pre><code class="language-python">n=0 # Commencer par initialiser la valeur de n
+while n&lt;6:
+    print(n**2, ' ', end='')
+    n+=1
+</code></pre>
+
+<pre><code>0  1  4  9  16  25  
+</code></pre>
+
+<h2 id="instructions-continue-et-break">Instructions <strong>continue</strong> et <strong>break</strong></h2>
+
+<p>Dans les boucles <em>for</em> et <em>while</em>, deux instructions peuvent être très utiles :
+* l&rsquo;instruction <strong>continue</strong> passe à l&rsquo;itération suivante de la boucle en cours, les autres instructions du bloc sont négligées.
+* l&rsquo;instruction <strong>break</strong> stoppe complètement la boucle courante en cours</p>
+
+<pre><code class="language-python"># Pour afficher le carré de l'input si ce dernier est pair (n%2=0)
+for n in [0,1,2,3,4,5]:
+    if n%2==1:
+        continue
+    print(n**2, ' ', end='')
+</code></pre>
+
+<pre><code>0  4  16  
+</code></pre>
+
+<pre><code class="language-python"># Pour afficher le carré de l'input tant que ce dernier n'est pas impair (n%2=1)
+for n in [0,1,2,3,4,5]:
+    if n%2==1:
+        break
+    print(n**2, ' ', end='')
+</code></pre>
+
+<pre><code>0  
+</code></pre>
+
+<p><ins><strong>Exemple</strong></ins>: écrire une boucle qui pour les valeurs de 5 à 15 calcule la valeur du carré seulement si l&rsquo;input est strictement supérieur à 10</p>
+<div class="edit-meta">Last updated on 17 Oct 2017 / Published on 17 Oct 2017<br></div><nav class="pagination"><a class="nav nav-prev" href="/fondations/chapter1/2-ifthenelse/" title="2 - Les conditions if - elif - else"><i class="fas fa-arrow-left" aria-hidden="true"></i> Prev - 2 - Les conditions if - elif - else</a>
+<a class="nav nav-next" href="/fondations/chapter1/4-occupationm%C3%A9moire/" title="4 - Contrôler ses codes en termes de mémoire et de temps d&#39;exécution">Next - 4 - Contrôler ses codes en termes de mémoire et de temps d&#39;exécution <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main><div class="sidebar">
+<nav>
+<ul>
+<li class=""><a href="https://JulieDjidji.github.io/">Home</a></li>
+
+<li class=""><a href="/getting-started/">Préparer le terrain : installer python</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class="parent"><a href="/fondations/">Poser les fondations</a>
+<ul class="sub-menu">
+
+<li class="parent"><a href="/fondations/chapter1/">Chapitre 1 : La syntaxe</a>
+<ul class="sub-menu">
+</ul>
+  
+</li>
+
+<li class=""><a href="/fondations/chapter2/">Chapitre 2 : Lecture, écriture et fermeture des fichiers</a>
+</li>
+
+<li class=""><a href="/fondations/chapter3/">Chapitre 3 : Quels objets en python ?</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/fondations/chapter4/">Chapitre 4 : Les packages en python</a>
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/">Explorer les données</a>
+<ul class="">
+
+<li class=""><a href="/explorer/chapter1/">Chapitre 1 : Manipuler les données</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/chapter2/">Chapitre 2 : Visualiser les données</a>
+</li>
+
+<li class=""><a href="/explorer/chapter3/">Chapitre 3 : Manipuler et visualiser des données géographiques</a>
+<ul class="">
+</ul>
+  
+</li>
+
+<li class=""><a href="/explorer/chapter4/">Chapitre 4 : Modéliser</a>
+</li>
+</ul>
+  
+</li>
+
+<li class=""><a href="/enrichir/">Enrichir les données</a>
+</li>
+
+<li class=""><a href="/applicationweb/">Créer une application</a>
+</li>
+
+<li class=""><a href="/optimiser/">Optimiser ses calculs</a>
+</li>
+</ul>
+</nav>
+
+
+<div class="sidebar-footer"></div>
+</div>
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
