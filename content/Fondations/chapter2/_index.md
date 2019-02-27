@@ -28,18 +28,127 @@ Trois fonctions permettent de lire le fichier :
 * Pour lire l'ensemble des lignes en séparant chaque ligne : fd.readlines()
 * Pour lire complètement un bloc : fd.read()
 
-<ins>**Test 1**</ins> : tester chacune des trois méthodes
+<ins>**Test 1**</ins> : tester chacune des trois méthodes avec le fichier *communes.csv*
+
+<script>
+function myFunction1() {
+    var x = document.getElementById("test1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction1()">Voir résultat</button>
+
+<div id="test1" hidden>
+<div></div>
+
+```python
+fd = open('./data/commune2019.csv', mode='r')
+fd.readline()
+```
+
+```python
+fd = open('./data/commune2019.csv', mode='r')
+fd.readlines()
+```
+
+```python
+fd = open('./data/commune2019.csv', mode='r')
+fd.read()
+```
+</div>
 
 <ins>**Test 2**</ins> : que se passe-t-il quand on effectue deux fois de suite la commande fd.readline()
 
 <ins>**Test 2bis**</ins> : retester fd.readline() après avoir fait fd.seek(0)
 
+<script>
+function myFunction2() {
+    var x = document.getElementById("test2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction2()">Voir résultat</button>
 
-fd.seek(0) permet de se repositionnement au début fichier !
+<div id="test2" hidden>
+<div></div>
+
+```python
+fd = open('./data/commune2019.csv', mode='r')
+print(fd.readline())
+print(fd.readline())
+```
+
+A chaque readline(), on passe à la ligne suivante. Pour rester sur la première ligne, il faut :
+
+* soit ré-éxécuter l'ouverture du fichier (*open*)
+* fd.seek(0) permet aussi de se repositionnement au début fichier !
+
+</div>
 
 
-<ins>**Test 3**</ins> : à partir de la fonction *with* et de la fonction readline, afficher l'ensemble des lignes
+<ins>**Test 3**</ins> : à partir de l'instruction *with* et de la fonction readline, afficher l'ensemble des lignes
 
+<script>
+function myFunction3() {
+    var x = document.getElementById("test3");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction3()">Voir résultat</button>
+
+<div id="test3" hidden>
+<div></div>
+
+```python
+with open('./data/commune2019.csv', mode='r') as file:
+    print(file.readline())
+```
+
+L'instruction *with* implique automatiquement la fermeture du fichier. Il est préférable d'utiliser systématiquement cette instruction. 
+
+</div>
+
+
+<ins>**Test 4**</ins> : appliquer une méthode pour lire un fichier txt et n'afficher que les deux premières observations
+
+<script>
+function readtxtFunction() {
+    var x = document.getElementById("readtxt");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="readtxtFunction()">Voir résultat</button>
+
+<div id="readtxt" hidden>
+<div></div>
+
+```python
+with open('france2016.txt', 'r', encoding='latin1') as txtfile:
+    print(txtfile.readline())
+    print(txtfile.readline())
+```
+
+</div>
 
 Il est aussi possible d'ouvrir les données avec le package *fileinput* en utilisant le code ci-dessous :
 
@@ -50,52 +159,39 @@ for line in fileinput.input('train.csv'):
 fileinput.close()
 ```
 
-<ins>**Test**</ins> : appliquer cette méthode pour lire un fichier txt
-
-
-
 Des modules permettent de lire spécifiquement des fichiers csv ou json :
 
 * le module *csv* :  csv.reader() pour lire les lignes au sein d'un csv
 * le module *json* : json.dumps() (nécessaires en cas de json emboîtés) suivi d'un json.loads()
 
 
+<ins>**Test**</ins> : Utiliser le module csv pour importer et afficher le contenu du fichier *communes.csv*
+
+<script>
+function readCSVFunction() {
+    var x = document.getElementById("readCSV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="readCSVFunction()">Voir résultat</button>
+
+<div id="readCSV" hidden>
+<div></div>
+
 ```python
 import csv
-with open('/home/jovyan/train.csv', 'r') as csvfile:
-    spamreader = csv.reader(csvfile, delimiter=',')
-    for row in spamreader:
-        print(', '.join(row))
+with open('/data/communes.csv', 'r') as csvfile:
+    file = csv.reader(csvfile, delimiter=',')
+    for row in file:
+	print(', '.join(row))
 ```
 
-
-```python
-import json
-with open('test.json', 'r') as f:
-    print(json.loads(json.dumps(f.read())))
-```
-
-    {'maps': [{'id': 'blabla', 'iscategorical': '0'},
-                  {'id': 'blabla', 'iscategorical': '0'}],
-         'masks': [{'id': 'valore'}],
-         'om_points': 'value',
-         'parameters': [{'id': 'valore'}]}
+</div>
 
 
-
-```python
-import json
-with open('test.json', 'r') as f:
-    try:
-        print(json.loads(f.read()))
-    except ValueError:
-        with open('test.json', 'r') as f:
-            print(json.loads(json.dumps(f.read())))
-```
-
-    {'maps': [{'id': 'blabla', 'iscategorical': '0'},
-                  {'id': 'blabla', 'iscategorical': '0'}],
-         'masks': [{'id': 'valore'}],
-         'om_points': 'value',
-         'parameters': [{'id': 'valore'}]}
 

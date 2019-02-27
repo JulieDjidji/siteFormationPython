@@ -34,10 +34,64 @@ weight: 20
 | Supprimer tous les éléments | *liste.clear()* ou *liste *= 0* ou *liste=[]* |
 
 
-<ins>**Exercice**</ins> : 
+<ins>**Exercice**</ins> : Importer les données (avec *open* et *csv.reader*) et les charger dans une liste
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction()">Voir résultat</button>
+
+<div id="myDIV" hidden>
+<div></div>
+
+``` python
+import csv
+liste=[]
+with open('./data/commune2019.csv', 'r') as csvfile:
+    file = csv.reader(csvfile, delimiter=',')
+    for row in file:
+    	liste.append(row)
+```
+</div>
 
 
 
+## Gérér le caractère mutable des listes
+
+<ins>**Test**</ins> : Créer une liste l1 et créer l2=l1 puis modifier l1. Afficher ensuite l2. Que constatez-vous ?
+
+
+
+<ins>**Test**</ins> : Faire une vraie copie de l1
+
+<script>
+function astuceFunction() {
+    var x = document.getElementById("astuce");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="astuceFunction()">Astuce</button>
+<div id="astuce" hidden>
+<div></div>
+
+**Fonction copy et deepcopy**
+
+Le package *copy* contient deux fonctions *copy* et *deepcopy* pour réaliser des copies. Il est préférable d'utiliser *deepcopy* car la fonction *copy* peut réaliser une copie imparfaite dans le cas des listes de listes.
+</div>
 
 
 ## Les compréhensions de liste
@@ -54,4 +108,28 @@ weight: 20
 * Rapidité : allocation de la mémoire avant l'ajout des éléments (plutôt qu'un redimensionnement au fil de l'exécution comme avec la fonction *append*)
 
 <ins>**Exercice**</ins> : A partir d'une list comprehension, ré-écrire la boucle for permettant de calculer le carré des éléments compris entre 1 et 5 et stocker le résultat dans une liste.
+
+<script>
+function myFunction2() {
+    var x = document.getElementById("myDIV2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction2()">Voir résultat</button>
+
+<div id="myDIV2" hidden>
+<div></div>
+
+``` python
+[i**2 for i in [1,2,3,4,5]]
+```
+</div>
+
+
+
 

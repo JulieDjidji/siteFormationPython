@@ -22,6 +22,36 @@ Il est possible de directement indiquer un booléen dans l'instruction.
 
 <ins>**Petit exemple**</ins>: afficher (avec la fonction print()) la valeur 1 si notre paramètre est inférieur à 10, 2 s'il est compris entre 10 et 20 et 3 sinon.
 
+<script>
+function myFunction() {
+    var x = document.getElementById("exemple");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction()">Voir résultat</button>
+
+<div id="exemple" hidden>
+<div></div>
+
+```python
+parametre=2
+if parametre < 10:
+      print(1)
+elif 10<=parametre\<20:
+    print(2)
+else:
+    print(3)
+```
+
+</div>
+
+
+
 Les conditions peuvent être utilisées dans les fonctions. Par exemple, à partir de la fonction précédente, on peut afficher le résultat seulement si la valeur de l'*input* est strictement supérieur à 10. Pour cela, on écrit le code suivant :
 
 
@@ -35,3 +65,29 @@ def auCarre(x):
 
 <ins>**Autre exemple**</ins>: écrire une fonction qui mutliplie par 1729 seulement si l'*input* est pair et sinon afficher un message d'erreur
 
+
+<script>
+function myFunction2() {
+    var x = document.getElementById("exemple2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction2()">Voir résultat</button>
+
+<div id="exemple2" hidden>
+<div></div>
+
+```python
+def fonctionInutile(x):
+    if x%2==0:
+        print(x*1729)
+    else:
+        print("L'input est impair")
+```
+
+</div>

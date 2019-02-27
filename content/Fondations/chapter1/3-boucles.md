@@ -15,9 +15,38 @@ for n in [0,1,2,3,4,5]:
     print(n**2, ' ', end='')
 ```
 
-    0  1  4  9  16  25  
+    0  1  4  9  16  25 
 
-<ins>**Exemple**</ins>: écrire une boucle qui pour les valeurs de 0 à 10 affiche un message qui indique si la valeur est paire ou impaire. Au sein d'un *print*, plusieurs chaînes peuvent être concaténées simplement en écrivant *print(chaine1, chaine2).
+<ins>**Exemple**</ins>: écrire une boucle qui pour les valeurs de 0 à 10 affiche un message qui indique si la valeur est paire ou impaire. Au sein d'un *print*, plusieurs chaînes peuvent être concaténées simplement en écrivant *print(chaine1, chaine2)*.
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("exemple");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction()">Voir résultat</button>
+
+<div id="exemple" hidden>
+<div></div>
+
+<ins>Astuce</ins> : On le verra avec la section sur les générateurs mais pour créer une liste entre 0 et 10, on peut simplement utiliser range(11).
+
+```python
+for i in range(11):
+    if i%2==0:
+        print(i, " est pair")
+    else:
+        print(i, " est impair")
+```
+
+</div>
 
 
 Si les boucles *for* s'effectuent essentiellement sur les listes, il reste néanmoins possible d'itérer sur une chaîne de caractères. Le code suivant parcourt la chaîne 'je code en python' et chaque espace est remplacé par "_".
@@ -76,4 +105,28 @@ for n in [0,1,2,3,4,5]:
     0  
 
 <ins>**Exemple**</ins>: écrire une boucle qui pour les valeurs de 5 à 15 calcule la valeur du carré seulement si l'input est strictement supérieur à 10
+
+<script>
+function myFunction2() {
+    var x = document.getElementById("exemple2");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+ 
+<button onclick="myFunction2()">Voir résultat</button>
+
+<div id="exemple2" hidden>
+<div></div>
+
+```python
+for i in range(5,16):
+    if i>10:
+        print('Carré de ', i, ' : ', i**2)
+```
+
+</div>
 

@@ -5,6 +5,11 @@ draft: false
 weight: 50
 ---
 
+## Qu'est ce qu'un package ?
+
+Définition d'un package et des modules
+https://enacit1.epfl.ch/introduction-python/index.html#fonctions-modules-packages-scripts
+
 ## Installation avec le gestionnaire de packages PIP ou le gestionnaire de packages Conda
 
 * Pip, qui signifie Pip Installs Packages, est le gestionnaire de paquets officiellement approuvé par Python. Il est généralement utilisé pour installer des paquets publiés sur PyPI (Python Package Index -repository of software for the Python programming language).
