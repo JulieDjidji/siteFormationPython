@@ -1,0 +1,6 @@
+baseURL = "https://JulieDjidji.github.io/"
+#baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Python site"
+theme="hugo-theme-techdoc"
+publishDir = "JulieDjidji.github.io"
