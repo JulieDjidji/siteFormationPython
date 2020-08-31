@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Deploying updates to GitHub..."
 
 cd public
